@@ -1,0 +1,31 @@
+$purple: #7B1EA2;
+$productSans: 'Product Sans', sans-serif;
+$horizontalGradient: linear-gradient(90deg, $purple, orange);
+$invertedHorizontalGradient: linear-gradient(90deg, orange, $purple);
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  mat-form-field{
+    color: $purple;
+    font-family: $productSans;
+  }
+  mat-checkbox {
+    color: $purple;
+    display: flex;
+    .mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+      background-color: $purple !important; 
+    }
+  }
+  button {
+    font-family: $productSans;
+    background-image: $horizontalGradient;
+    box-shadow: none;
+    border-radius: 50px;
+    height: 50px;
+  }
+}
+
+span .mat-option-text{
+    font-family: $productSans !important;
+  }

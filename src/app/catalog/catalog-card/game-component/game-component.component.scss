@@ -1,0 +1,31 @@
+$purple: #7B1EA2;
+$horizontalGradient: linear-gradient(90deg, $purple, orange);
+
+mat-list-item {
+  h3, h4, p, span {
+    color: $purple;
+    font-family: 'Product Sans', sans-serif;
+  }
+  h3 {
+    font-size: 12pt !important;
+  }
+  h4 {
+    font-size: 16pt !important;
+    color: #999;
+  }
+  span {
+    color: #999;
+  }
+  .personal-notes {
+    font-style: italic;
+    font-size: 14pt;
+  }
+  .game-item {
+    text-align: left;
+    margin-left: 20px;
+  }
+  mat-icon {
+    background-image: $horizontalGradient;
+    color: white;
+  }
+}

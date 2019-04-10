@@ -1,0 +1,13 @@
+.catalog-wrapper {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+app-catalog-card{
+  flex-grow: 1;
+  margin: 5% 10% 10% 10%;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}

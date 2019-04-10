@@ -1,0 +1,8 @@
+<div class="catalog-card">
+  <!-- <app-home-form class="home-form"></app-home-form> -->
+  <mat-list>
+    <h3 mat-subheader>Registered Games</h3>
+    <app-filter-games-list (changed)='filter($event)'></app-filter-games-list>
+    <app-game-component [games]='filteredGames'></app-game-component>
+  </mat-list>
+</div>

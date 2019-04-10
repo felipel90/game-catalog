@@ -1,0 +1,21 @@
+$purple: #7B1EA2;
+$productSans: 'Product Sans', sans-serif;
+mat-toolbar {
+  background-color: transparent;
+  color: $purple;
+  font-family: $productSans;
+  box-shadow: 0 1px 25px rgba(0,0,0,0.3);
+  & a {
+    font-family: $productSans;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .menu-spacer {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+  .menu-item {
+    padding: 12px;
+  }
+  
+}

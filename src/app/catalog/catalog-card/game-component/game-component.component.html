@@ -1,0 +1,14 @@
+<mat-list-item *ngFor="let game of games">
+  <mat-icon mat-list-icon>videogame_asset</mat-icon>
+  <div class="game-item">
+    <h4 mat-line>{{game.title}}</h4>
+    <p mat-line> Launched: <span>{{game.gameAge}} </span></p>
+    <p mat-line> Year: <span>{{game.year}}</span></p>
+    <p mat-line> Console: <span>{{game.console}}</span></p>
+    <p mat-line *ngIf='game.completed'> Status: <span>Completed!</span></p>
+    <p mat-line *ngIf='game.completed'> Completion Date: <span>{{game.dateOfCompletion}}</span></p>
+    <p mat-line *ngIf='!game.completed'> Status: <span>Incomplete</span></p>
+    <p mat-line *ngIf='game.personalNotes' class="personal-notes"><span>"{{game.personalNotes}}"</span></p>
+  </div>
+  <mat-divider></mat-divider>
+</mat-list-item>

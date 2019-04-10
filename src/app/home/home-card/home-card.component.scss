@@ -1,0 +1,10 @@
+.home-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .home-form {
+    width: 75%;
+    height: 100%;
+  }
+}

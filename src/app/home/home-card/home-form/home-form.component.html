@@ -1,0 +1,64 @@
+<div>
+  <form
+    ngForm
+    (ngSubmit)='onSubmit()'
+    class="form-container">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Game Title"
+        [(ngModel)]='game.title'
+        required
+        name='gameTitle'>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Year"
+        [(ngModel)]='game.year'
+        required
+        name='gameYear'
+        type="number"
+        required>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Console" [(ngModel)]='game.console' name='console' required>
+        <mat-option value="PS4">PS4</mat-option>
+        <mat-option value="XBOX ONE">XBOX ONE</mat-option>
+        <mat-option value="Nintendo Switch">Nintendo Switch</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-checkbox
+      [ngModel]='game.completed'
+      name='completedStatus'
+      (ngModelChange)='changeCompletedStatus($event)'
+      >Completed</mat-checkbox>
+  
+    <mat-form-field *ngIf='game.completed'>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Date of Completion"
+        [(ngModel)]='game.dateOfCompletion'
+        name='gameDateOfCompletion'>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea
+        matInput
+        placeholder="Personal Notes"
+        [(ngModel)]='game.personalNotes'
+        name='gamePersonalNotes'></textarea>
+    </mat-form-field>
+  
+    <button
+      mat-raised-button
+      color='primary'
+      type="submit">Add New Game</button>
+  </form>
+</div>
