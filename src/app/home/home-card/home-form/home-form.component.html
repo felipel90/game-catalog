@@ -2,14 +2,17 @@
   <form
     ngForm
     (ngSubmit)='onSubmit()'
-    class="form-container">
+    class="form-container"
+  >
+
     <mat-form-field>
       <input
         matInput
         placeholder="Game Title"
         [(ngModel)]='game.title'
         required
-        name='gameTitle'>
+        name='gameTitle'
+      >
     </mat-form-field>
 
     <mat-form-field>
@@ -20,11 +23,17 @@
         required
         name='gameYear'
         type="number"
-        required>
+        required
+      >
     </mat-form-field>
   
     <mat-form-field>
-      <mat-select placeholder="Console" [(ngModel)]='game.console' name='console' required>
+      <mat-select 
+        placeholder="Console"
+        [(ngModel)]='game.console'
+        name='console'
+        required
+      >
         <mat-option value="PS4">PS4</mat-option>
         <mat-option value="XBOX ONE">XBOX ONE</mat-option>
         <mat-option value="Nintendo Switch">Nintendo Switch</mat-option>
@@ -35,7 +44,9 @@
       [ngModel]='game.completed'
       name='completedStatus'
       (ngModelChange)='changeCompletedStatus($event)'
-      >Completed</mat-checkbox>
+    >
+      Completed
+    </mat-checkbox>
   
     <mat-form-field *ngIf='game.completed'>
       <input
@@ -43,7 +54,8 @@
         [matDatepicker]="picker"
         placeholder="Date of Completion"
         [(ngModel)]='game.dateOfCompletion'
-        name='gameDateOfCompletion'>
+        name='gameDateOfCompletion'
+      >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -53,12 +65,16 @@
         matInput
         placeholder="Personal Notes"
         [(ngModel)]='game.personalNotes'
-        name='gamePersonalNotes'></textarea>
+        name='gamePersonalNotes'>
+      </textarea>
     </mat-form-field>
   
     <button
       mat-raised-button
       color='primary'
-      type="submit">Add New Game</button>
+      type="submit"
+    >
+      Add New Game
+    </button>
   </form>
 </div>

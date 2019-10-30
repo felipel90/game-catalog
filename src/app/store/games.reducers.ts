@@ -29,6 +29,7 @@ export function reducer(state = initialState, action: AppAction): State {
         selected: null,
         error: null
       };
+
     case gameActions.GET_GAMES_SUCCESS:
       return {
         ...state,
@@ -37,6 +38,7 @@ export function reducer(state = initialState, action: AppAction): State {
         selected: null,
         error: null
       };
+
     case gameActions.GET_GAMES_ERROR:
       return {
         ...state,
@@ -53,6 +55,7 @@ export function reducer(state = initialState, action: AppAction): State {
         done: false,
         error: null
       };
+
     case gameActions.CREATE_GAME_SUCCESS:
       {
         const newGame = {
@@ -60,7 +63,7 @@ export function reducer(state = initialState, action: AppAction): State {
           id: action.payload
         };
         const data = [
-          ...state.data,
+          // ...state,
           newGame
         ];
         return {

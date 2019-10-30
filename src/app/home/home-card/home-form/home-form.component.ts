@@ -15,10 +15,11 @@ export class HomeFormComponent implements OnInit {
   game = {} as Game;
   games: Game[];
   constructor(
-              private store: Store<Game>) { }
+    private store: Store<Game>
+  ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
+
   onSubmit() {
     const gameData = this.game;
     this.game.dateOfCompletion === undefined ?
@@ -28,12 +29,14 @@ export class HomeFormComponent implements OnInit {
     // this.dataService.insertGame(gameData);
     this.store.dispatch(new AddGame(gameData));
   }
+
   changeCompletedStatus(event: boolean) {
     this.game.completed = event;
     this.game.completed ?
       this.game.dateOfCompletion = this.game.dateOfCompletion = 'Not Completed' :
       this.game.dateOfCompletion = null;
   }
+
   transformDateOfCompletion(date: any) {
     return date.toString().substring(4, 16);
   }

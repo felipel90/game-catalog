@@ -28,6 +28,9 @@ export const reducers: ActionReducerMap<any> = {
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([GameEffects])
   ],
-  providers: [DataService, Actions]
+  providers: [
+    DataService,
+    Actions
+  ]
 })
 export class CatalogModule { }

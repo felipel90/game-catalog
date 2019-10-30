@@ -13,6 +13,8 @@ import { AppRoutingModule } from '../app-routing.module';
     AppRoutingModule,
     CustomMaterialModule
   ],
-  exports: [ NavMenuComponent ]
+  exports: [
+    NavMenuComponent
+  ]
 })
 export class SharedModule { }

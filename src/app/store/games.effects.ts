@@ -5,18 +5,19 @@ import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import {
-  AddGame, AddGameError, AddGameSuccess,
-  GetAllGamesError, GetAllGamesSuccess,
+  AddGame,
+  AddGameError,
+  AddGameSuccess,
+  GetAllGamesError,
 } from './games.actions';
 import { DataService } from '../core/data.service';
-import { Game } from '../shared/interfaces';
-import { getAllGames } from './games.reducers';
 
 @Injectable()
 export class GameEffects {
-  constructor(private actions$: Actions,
-              private dataService: DataService) {
-  }
+  constructor(
+    private actions$: Actions,
+    private dataService: DataService
+  ) { }
 
   @Effect()
   getAllGames$: Observable<Action> = this.actions$
@@ -36,6 +37,4 @@ export class GameEffects {
       map((response) => new AddGameSuccess(response)),
       catchError((err) => [new AddGameError(err)])
     );
-
-
 }

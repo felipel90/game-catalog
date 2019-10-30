@@ -9,8 +9,6 @@ export const CREATE_GAME = '[CREATE] Game';
 export const CREATE_GAME_SUCCESS = '[CREATE] Game Success';
 export const CREATE_GAME_ERROR = '[CREATE] Game Error';
 
-
-
 export class GetAllGames implements Action {
   readonly type = GET_GAMES;
 }
@@ -49,5 +47,3 @@ export class AddGameError implements Action {
   constructor(public payload: Error) {
   }
 }
-
-

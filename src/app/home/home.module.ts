@@ -14,8 +14,6 @@ import { GameEffects } from '../store/games.effects';
 import * as gameReducer from '../store/games.reducers';
 import { DataService } from '../core/data.service';
 
-
-
 export const reducers: ActionReducerMap<any> = {
   games: gameReducer.reducer
 };
@@ -31,6 +29,10 @@ export const reducers: ActionReducerMap<any> = {
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([GameEffects])
   ],
-  providers: [DataService, Actions]
+  providers: [
+    DataService,
+    Actions
+  ]
 })
+
 export class HomeModule { }

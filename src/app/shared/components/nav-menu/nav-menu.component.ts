@@ -6,12 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent implements OnInit {
-  title = `opa`;
   constructor() { }
 
   ngOnInit() {
-  }
-  teste = (event: any) => {
-    console.log(event.target.value);
   }
 }
