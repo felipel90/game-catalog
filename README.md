@@ -2,8 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
-> The project is built as a challenge for a front-end position at Translucent Computing.
-
 ## Explained approaches
 > As mandatory items for the test the following technologies are used:
 > * Angular 7
@@ -16,8 +14,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > #### To host:
 > * Firebase Hosting
 >> Besides tha database service, Firebase also provides a Host service with a simple deploy process.
-
-
 
 ## Installation 
 > Make sure that you have a Node.js environment in your machine to run this project locally.
